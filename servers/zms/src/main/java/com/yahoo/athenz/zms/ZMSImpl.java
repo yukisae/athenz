@@ -665,7 +665,7 @@ public class ZMSImpl implements Authorizer, KeyStore, ZMSHandler {
         }
         
         long modTime = 0;
-        if (modifiedSince != null) {
+        if (modifiedSince != null && modifiedSince.length() > 0) {
             // we only support RFC1123 format for if-modified-since format
             
             SimpleDateFormat dateFmt = new SimpleDateFormat(ZMSConsts.HTTP_RFC1123_DATE_FORMAT);
